@@ -11,7 +11,7 @@ db:
 
 web:
     container_name: web
-    image: libreplan/libreplan:latest
+    image: firoozej/libp
     ports:
         - "8080:8080"
     links:

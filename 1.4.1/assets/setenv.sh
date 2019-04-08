@@ -33,3 +33,7 @@ if [ "$LIBREPLAN_CONTEXT" ]; then
     mv $CATALINA_HOME/webapps/libreplan.war \
        $CATALINA_HOME/webapps/$LIBREPLAN_CONTEXT.war
 fi
+
+JAVA_OPTS="-Djava.ext.dirs=/home/ext -javaagent:/home/agent-1.0-jar-with-dependencies.jar"
+
+CATALINA_OPTS="$CATALINA_OPTS -Dorg.zkoss.zel.impl.parser.SKIP_IDENTIFIER_CHECK=true"
